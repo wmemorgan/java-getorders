@@ -1,6 +1,10 @@
 package com.lambdaschool.crudyorders.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name= "payments")
@@ -12,6 +16,10 @@ public class Payment {
 
     @Column(nullable = false)
     private String type;
+
+    @ManyToMany(mappedBy = "payments")
+    @JsonIgnoreProperties("payments")
+    private Set<Order> orders = new HashSet<>();
 
     public Payment() {
     }
