@@ -1298,7 +1298,7 @@ Using the provided seed data, a successful application will return the following
 
 ## Instructions
 
-* [ ] Please fork and clone this repository. Copy your solution from part 1 into this repository. Your solution from part 1 is the starting point for part 2. If your part 1 did not reach MVP, please check with your TL group leader about your options. Regularly commit and push your code as appropriate.
+* [x] Please fork and clone this repository. Copy your solution from part 1 into this repository. Your solution from part 1 is the starting point for part 2. If your part 1 did not reach MVP, please check with your TL group leader about your options. Regularly commit and push your code as appropriate.
 
 * [ ] Expose the following endpoints
 
