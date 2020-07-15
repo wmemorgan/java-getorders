@@ -2,6 +2,7 @@ package com.lambdaschool.crudyorders.services;
 
 import com.lambdaschool.crudyorders.models.Customer;
 import com.lambdaschool.crudyorders.repositories.CustomerRepository;
+import com.lambdaschool.crudyorders.views.CustCountOrders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,6 +51,11 @@ public class CustomerServiceImpl implements CustomerService {
         }
 
         return list;
+    }
+
+    @Override
+    public List<CustCountOrders> getCustCountOrders() {
+        return customerRepository.getCustCountOrders();
     }
 }
 

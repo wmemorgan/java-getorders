@@ -2,6 +2,7 @@ package com.lambdaschool.crudyorders.controllers;
 
 import com.lambdaschool.crudyorders.models.Customer;
 import com.lambdaschool.crudyorders.services.CustomerService;
+import com.lambdaschool.crudyorders.views.CustCountOrders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,4 +43,13 @@ public class CustomerController {
 
         return new ResponseEntity<>(myList, HttpStatus.OK);
     }
+
+    // http://localhost:2019/customers/orders/count
+    @GetMapping(value = "/orders/count", produces = {"application/json"})
+    public ResponseEntity<?> listCustomersByOrderCount() {
+        List<CustCountOrders> myList = customerService.getCustCountOrders();
+
+        return new ResponseEntity<>(myList, HttpStatus.OK);
+    }
+
 }
